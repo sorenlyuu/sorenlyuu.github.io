@@ -7,7 +7,7 @@ const texts = {
     "LABEL_C": "✎ Links !!",
     "TEXT_B": "Programming, Music, Astronomy, Botany, Arts & Development, Gambling /j",
     "TEXT_C":
-    "[Discord](https://discord.com/users/1021040148126904400) | [Genshin](https://enka.network/u/657422394)\n[Github](https://github.com/colonthree3) | [E621](https://tenor.com/view/the-rock-sus-the-rock-meme-the-rock-sus-meme-gif-23972805)"
+    "[Discord](https://discord.com/users/1021040148126904400) | [Genshin](https://enka.network/u/657422394)\n[Github](https://github.com/sorenlyuu) | [E621](https://tenor.com/view/the-rock-sus-the-rock-meme-the-rock-sus-meme-gif-23972805)"
 }
 
 function parse(text) {
