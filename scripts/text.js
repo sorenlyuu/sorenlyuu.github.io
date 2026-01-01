@@ -2,7 +2,7 @@ const texts = {
     "LABEL_SOREN": "__@ SOR__EN *!!*",
     "LABEL_INFO": "~ 16Years , He / Him ♡",
     "LABEL_A": "✦ About Me !!",
-    "TEXT_A": "My birthday is Janurary 23rd, I LOVE cats and sneps!! I've learnt JS, TS, Java, Lua and abit of C# and C++, Currently learning web development!",
+    "TEXT_A": "My birthday is Janurary 23rd, I LOVE cats and sneps!! I've learnt JS, TS, Java, Python, Lua and abit of C# and C++, Currently learning web development!",
     "LABEL_B": "♥ Interests !!",
     "LABEL_C": "✎ Links !!",
     "TEXT_B": "Programming, Music, Astronomy, Botany, Arts & Development, Gambling /j",
