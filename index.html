@@ -6,9 +6,10 @@
     <title>:3</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/heart.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Soren Lyuu's Github Page" />
-    <meta property="og:image" content="https://avatar-cyan.vercel.app/api/pfp/1021040148126904400/image"/>
+    <meta property="og:image" content="https://avatar-cyan.vercel.app/api/pfp/1021040148126904400/image" />
     <meta property="og:description" content="∑(O_O;)" />
     <meta property="og:url" content=https://sorenlyuu.github.io />
     <meta property="og:image:width" content="600" />
@@ -19,43 +20,98 @@
 
 <body>
     <div class="bgImg"></div>
-    <div class="mainContainer">
-        <div class="header">
-            <div class="headerText">
-                <h1 id="LABEL_SOREN">LABEL_SOREN</h1>
-                <small id="LABEL_INFO">LABEL_INFO</small>
+
+    <div class="layout" id="layout">
+        <div class="sideBar">
+            <input type="image" src="assets/images/home.png" id="BUTTON_HOME" onclick="WDUJIWGUYFDGVYEUI('home')">
+            <input type="image" src="assets/images/heart.png" id="BUTTON_HEART" onclick="WDUJIWGUYFDGVYEUI('heart')">
+            <input type="image" src="assets/images/star.png" id="BUTTON_STAR" onclick="WDUJIWGUYFDGVYEUI('star')">
+            <input type="image" src="assets/images/add.png" id="BUTTON_ADD" onclick="WDUJIWGUYFDGVYEUI('add')">
+        </div>
+
+        <div class="mainContainer" id="containerPg_home">
+            <div class="header">
+                <div class="headerText">
+                    <h1 id="LABEL_SOREN">LABEL_SOREN</h1>
+                    <small id="LABEL_INFO">LABEL_INFO</small>
+                </div>
+                <div class="imgContainer">
+                    <img src="assets/images/UI_Gacha_AvatarImg_Columbina.png" width="100" height="100" id="IMG_DCPFP">
+                </div>
             </div>
-            <div class="imgContainer">
-                <img src="assets/images/placeholder.png" width="100" height="100" id="IMG_DCPFP">
+            <div class="aboutMe">
+                <div class="container">
+                    <img src="assets/images/iconA.jpg">
+                    <div class="textContainer">
+                        <h1 id="LABEL_A">LABEL_A</h1>
+                        <p id="TEXT_A">TEXT_A</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="assets/images/iconB.jpg">
+                    <div class="textContainer">
+                        <h1 id="LABEL_B">LABEL_B</h1>
+                        <p id="TEXT_B">TEXT_B</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="assets/images/iconC.jpg">
+                    <div class="textContainer">
+                        <h1 id="LABEL_C">LABEL_C</h1>
+                        <p id="TEXT_C">TEXT_C</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="aboutMe">
-            <div class="container">
-                <img src="assets/images/iconA.jpg">
-                <div class="textContainer">
-                    <h1 id="LABEL_A">LABEL_A</h1>
-                    <p id="TEXT_A">TEXT_A</p>
-                </div>
+
+        <div class="mainContainer" id="containerPg_heart">
+            <div class="heartHeader">
+                <h1 id="LABEL_HEART_HEADER">LABEL_HEART_HEADER</h1>
             </div>
-            <div class="container">
-                <img src="assets/images/iconB.jpg">
-                <div class="textContainer">
-                    <h1 id="LABEL_B">LABEL_B</h1>
-                    <p id="TEXT_B">TEXT_B</p>
+            <div class="socialsContainer">
+                <div class="socialItem">
+                    <img src="assets/images/Github.png">
+                    <h1 id="LABEL_SOCIAL_A">LABEL_SOCIAL_A</h1>
                 </div>
-            </div>
-            <div class="container">
-                <img src="assets/images/iconC.jpg">
-                <div class="textContainer">
-                    <h1 id="LABEL_C">LABEL_C</h1>
-                    <p id="TEXT_C">TEXT_C</p>
+                <div class="socialItem">
+                    <img src="assets/images/Discord.png">
+                    <h1 id="LABEL_SOCIAL_B">LABEL_SOCIAL_B</h1>
+                </div>
+                <div class="socialItem">
+                    <img src="assets/images/Primogem.png">
+                    <h1 id="LABEL_SOCIAL_C">LABEL_SOCIAL_C</h1>
+                </div>
+                <div class="socialItem">
+                    <img src="assets/images/Reddit.png">
+                    <h1 id="LABEL_SOCIAL_D">LABEL_SOCIAL_D</h1>
+                </div>
+                <div class="socialItem">
+                    <img src="assets/images/placeholder.png">
+                    <h1 id="LABEL_SOCIAL_E">LABEL_SOCIAL_E</h1>
+                </div>
+                <div class="socialItem">
+                    <img src="assets/images/Tiktok.png">
+                    <h1 id="LABEL_SOCIAL_F">LABEL_SOCIAL_F</h1>
                 </div>
             </div>
         </div>
+
+        <div class="mainContainer" id="containerPg_star">
+            <div class="AGGDHB">
+                <h1 id="LABEL_UJEBFDI">LABEL_UJEBFDI</h1>
+            </div>
+        </div>
+
+        <div class="mainContainer" id="containerPg_add">
+            <div class="AGGDHB">
+                <h1 id="LABEL_UDHADKI">LABEL_UDHADKI</h1>
+            </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/text.js"></script>
-    <script src="scripts/api.js"></script>
+    <script src="scripts/button.js"></script>
 </body>
 
 </html>
