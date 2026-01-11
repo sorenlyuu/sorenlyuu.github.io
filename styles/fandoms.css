@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'SignPaintoh';
+    src: url('../assets/fonts/Sign\ Paintoh.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Velnica';
+    src: url('../assets/fonts/Velnica.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'French';
+    src: url('../assets/fonts/French.ttf') format('opentype');
+}
+
+:root {
+    --text-shadow: drop-shadow(2px 1px 0 black) drop-shadow(2px 1px 0 black);
+    --text-shadow-why: drop-shadow(2px 1px 0 white) drop-shadow(2px 1px 0 white);
+    --text-stroke: drop-shadow(1.5px 0px 0 black) drop-shadow(0px -0.5px 0 black) drop-shadow(-0.5px 0px 0 black) drop-shadow(0px 1.5px 0 black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(19, 19, 19);
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header h1 {
+    color: white;
+    background-color: rgb(14, 14, 14);
+    filter: var(--text-shadow-why);
+    border-top-right-radius: 0.5rem;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header>h1:first-child {
+    color: white;
+    background-color: rgb(22, 22, 22);
+    padding: 0 0.5rem 0 0.5rem;
+    border-right: 3px solid rgb(255, 255, 255);
+    filter: var(--text-shadow-why);
+    border-radius: 0;
+}
+
+
+.fandoms {
+    width: 50%;
+    height: fit-content;
+    max-height: 80%;
+    background-color: rgb(27, 27, 27);
+    border-radius: 0.5rem;
+    filter: var(--text-shadow-why);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: center;
+    filter: var(--text-shadow);
+    gap: 0;
+    color: rgb(255, 255, 255);
+}
+
+.textContainer h1 {
+    font-family: "Velnica";
+    font-size: 2rem;
+}
+
+.textContainer h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+.fandom {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem 0 1rem;
+    background: rgb(14, 14, 14)
+}
+
+.fandoms img {
+    margin-left: auto;
+    align-self: center;
+    aspect-ratio: 1/1;
+    width: 15%;
+    height: auto;
+    border-radius: 20%;
+}
+
+small {
+    position: absolute;
+    color: white;
+    filter: var(--text-stroke);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    bottom: 3.5%;
+    left: 25%;
+}
+
+a {
+    position: absolute;
+    color: white;
+    filter: var(--text-stroke);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    bottom: 3.5%;
+    right: 24%;
+}
+
+.fandoms::-webkit-scrollbar {
+    width: 8px;
+}
+
+.fandoms::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fandoms::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}

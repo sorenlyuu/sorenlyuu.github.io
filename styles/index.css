@@ -1,309 +1,327 @@
 @font-face {
-    font-family: 'MilkshakeCreps';
-    src: url('../assets/fonts/MilkshakeCreps.otf') format('opentype');
+    font-family: 'SignPaintoh';
+    src: url('../assets/fonts/Sign\ Paintoh.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'VanillaCaramel';
-    src: url('../assets/fonts/VanillaCaramel.otf') format('opentype');
+    font-family: 'Velnica';
+    src: url('../assets/fonts/Velnica.ttf') format('opentype');
 }
 
 @font-face {
-    font-family: 'MilkyNice';
-    src: url('../assets/fonts/MilkyNice-Clean.otf') format('opentype');
+    font-family: 'French';
+    src: url('../assets/fonts/French.ttf') format('opentype');
 }
 
 :root {
-    --text-shadow: drop-shadow(2px 1px 0 white) drop-shadow(2px 1px 0 white);
-    --text-stroke: drop-shadow(1.5px 0px 0 white) drop-shadow(0px -0.5px 0 white) drop-shadow(-0.5px 0px 0 white) drop-shadow(0px 1.5px 0 white);
+    --text-shadow: drop-shadow(2px 1px 0 black) drop-shadow(2px 1px 0 black);
+    --text-shadow-why: drop-shadow(2px 1px 0 white) drop-shadow(2px 1px 0 white);
+    --text-stroke: drop-shadow(1.5px 0px 0 black) drop-shadow(0px -0.5px 0 black) drop-shadow(-0.5px 0px 0 black) drop-shadow(0px 1.5px 0 black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-}
-
-.bgImg {
-    background-image: url('../assets/images/background.png');
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-    height: 100%;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
-
-.sideBar button {
-    background: none;
-    border: none;
-}
-
-.layout {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    right: 1.5%;
     height: 100%;
+    overflow-x: hidden;
+}
+
+.letsholdthisplacetogether {
+    background-color: black;
     width: 100%;
-}
-
-.mainContainer {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 10px rgba(85, 116, 219, 0.623);
-    backdrop-filter: blur(9px);
-    border-radius: 2rem;
-    width: 35%;
-    height: 80%;
-    max-width: 75vw;
-    max-height: 50rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5rem;
-}
-
-.imgContainer {
-    margin-top: 0.2rem;
-}
-
-#LABEL_SOREN {
-    color: rgb(113, 134, 255);
-    filter: var(--text-shadow);
-    font-family: "MilkyNice";
-    font-size: 3rem;
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-
-#IMG_DCPFP {
-    border-radius: 50%;
-    border: 4px solid #ffffff;
-    box-shadow: 0 4px 15px rgb(113, 134, 255);
-    object-fit: cover;
-    width: 6rem;
-    height: auto;
-}
-
-.headerText {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    left: 1.4rem;
-    top: 0.6rem;
-}
-
-#LABEL_INFO {
-    color: rgb(113, 134, 255);
-    filter: var(--text-stroke);
-    font-family: "MilkyNice";
-    font-size: 1.5rem;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.aboutMe {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 75%;
-    gap: 5%;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(9px);
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transform: translateZ(0);
-}
-
-.container img {
-    border-bottom-right-radius: 10%;
-    border-top-right-radius: 10%;
-    border-right: 3px solid white;
-    object-fit: contain;
-}
-
-.textContainer {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    color: rgb(113, 134, 255);
-    gap: 0;
-}
-
-.textContainer h1 {
-    font-family: "MilkshakeCreps";
-    text-align: center;
-    padding: 0;
-    margin: 0;
+.profileContainer>h1 {
     font-size: 2rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.8rem 0 0.8rem 0.5rem;
+}
+
+.profileContainer a {
+    color: white;
+}
+
+.pgBlur {
+    position: absolute;
+    z-index: 2;
+    width: 95vw;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(75, 75, 75, 0.267);
+    backdrop-filter: blur(8px);
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main {
+    position: relative;
+    width: 95vw;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    z-index: 0;
+    width: 95vw;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+}
+
+.containerPg {
+    transition: opacity 0.3s ease;
+}
+
+.hintContainer,
+.socialBox {
+    position: absolute;
+    border-radius: 1rem;
+    color: white;
+    pointer-events: none;
+    display: flex;
+    padding: 1rem 1rem 1rem 1rem;
+    flex-direction: row;
+}
+
+.hintContainer h1,
+.socialBox h1 {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    font-family: "French";
+    color: white;
     filter: var(--text-shadow);
+    font-size: 2.5rem;
+    text-align: center;
 }
 
-.textContainer p {
-    font-family: "MilkyNice";
-    padding: 0;
-    padding-left: 1px;
-    margin: 0;
-    text-align: left;
-    filter: var(--text-stroke);
+.hintContainer img,
+.socialBox img {
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    background-color: rgb(238, 238, 238);
+    filter: invert(1);
+    width: 2rem;
+    height: 2rem;
 }
 
-#TEXT_A {
-    font-size: 1rem;
+.socialBox img {
+    background-color: rgb(17, 17, 17);
+    filter: none;
 }
 
-#TEXT_B {
-    font-size: 1.3rem;
-}
 
-#TEXT_C {
-    font-size: 1.2rem;
-}
-
-a {
-    color: rgb(113, 134, 255);
-}
-
-.sideBar {
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 10px rgba(85, 116, 219, 0.623);
-    backdrop-filter: blur(9px);
-    border-radius: 2rem 0 0 2rem;
-    width: 4.5rem;
-    padding: 1rem 0;
+.textContainer,
+.socialInfo {
+    background-color: rgb(17, 17, 17);
+    padding: 0.7rem 0.7rem 0 0.7rem;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
     display: flex;
     flex-direction: column;
+    filter: drop-shadow(2px 1px 0 black) drop-shadow(2px 1px 0 black);
+}
+
+.textContainer h1,
+.socialInfo h1 {
+    text-align: left;
+}
+
+.textContainer>h1:first-child,
+.socialInfo>h1:first-child {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    filter: var(--text-shadow);
+    text-align: left;
+}
+
+.textContainer h2,
+.socialBox h2 {
+    color: white;
+    pointer-events: visible;
+    font-family: "French";
+}
+
+
+#IMG_LYCAON_MINDSCAPE {
+    width: 95vw;
+    z-index: 0;
+    scale: 1.1;
+    height: auto;
+    position: relative;
+    display: block;
+    transition: transform 0.1s ease-out;
+    transform-origin: center center;
+}
+
+
+#hintContainer_A {
+    top: 10%;
+    left: 10%;
+}
+
+#hintContainer_B {
+    top: 15%;
+    right: 30%;
+}
+
+#hintContainer_C {
+    bottom: 15%;
+    left: 5%;
+}
+
+#hintContainer_D {
+    bottom: 10%;
+    right: 27%
+}
+
+.buttonsContainer {
+    background-color: rgb(19, 19, 19);
+    width: 4.5rem;
+    height: 75%;
+    border-radius: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     align-items: center;
+    justify-items: center;
     gap: 1.2rem;
 }
 
-.sideBar input {
-    filter: drop-shadow(0 0 7px rgba(170, 139, 36, 0.62)) invert(1);
+.buttonsContainer input {
+    filter: drop-shadow(0 0 7px rgba(100, 100, 100, 0.62)) invert(1);
     width: 45%;
     height: auto;
     cursor: pointer;
     object-fit: cover;
     transition: filter 0.2s;
+    transition: scale 0.2s ease;
 }
 
-@media screen and (max-width: 600px) {
-    .layout {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        right: 1.5%;
-        height: 100%;
-        width: 100%;
-    }
+#TEXT_FOOTER {
+    font-size: 1rem;
+}
 
-    .mainContainer {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 8px 10px rgba(85, 116, 219, 0.623);
-        backdrop-filter: blur(9px);
-        border-radius: 2rem;
-        width: 75%;
-        height: 70%;
-        max-width: 75vw;
-        max-height: 50rem;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
+.infoContainer {
+    z-index: 2;
+    position: absolute;
+    color: white;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+}
 
-    .textContainer h1 {
-        font-family: "MilkshakeCreps";
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        font-size: 1.4rem;
-        filter: var(--text-shadow);
-    }
+.infoContainer>h1:first-child {
+    background-color: rgba(20, 20, 20);
+    filter: var(--text-shadow-why);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    font-size: 4rem;
+    height: fit-content;
+}
 
-    .textContainer p {
-        font-family: "MilkyNice";
-        padding: 0;
-        margin: 0;
-        text-align: left;
-        filter: var(--text-stroke);
-    }
+.infoTextContainer {
+    background-color: rgba(20, 20, 20);
+    filter: var(--text-shadow-why);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+}
 
-    #TEXT_A {
-        font-size: 14px;
-    }
+.infoTextContainer h1 {
+    font-size: 5rem;
+    font-family: "SignPaintoh";
+}
 
-    #TEXT_B {
-        font-size: 1.2rem;
-    }
+.infoContainer h2 {
+    font-size: 2.5rem;
+    font-family: "French";
+}
 
-    #TEXT_C {
-        font-size: 14px;
-    }
+#infoContainer_A {
+    top: 15%;
+    left: 5%;
+}
 
-    #LABEL_SOREN {
-        color: rgb(113, 134, 255);
-        filter: var(--text-shadow);
-        font-family: "MilkyNice";
-        font-size: 2rem;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        padding-top: 10px;
-    }
+#infoContainer_B {
+    top: 17%;
+    left: 40%;
+}
 
-    .headerText {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
+#infoContainer_B h1 {
+    font-size: 3rem;
+}
 
-    #LABEL_INFO {
-        color: rgb(113, 134, 255);
-        filter: var(--text-stroke);
-        font-family: "MilkyNice";
-        font-size: 1.3rem;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        bottom: 10px;
-    }
+#infoContainer_B h2 {
+    font: 3rem;
+}
 
-    .header {
-        display: flex;
-        padding: 0;
-    }
+#socialBoxA {
+    top: 20%;
+    left: 8%;
+}
 
+#socialBoxB {
+    top: 20%;
+    left: 30%;
+}
+
+#socialBoxC {
+    top: 20%;
+    left: 52%;
+}
+
+#socialBoxD {
+    bottom: 20%;
+    left: 8%;
+}
+
+#socialBoxE {
+    bottom: 18%;
+    left: 30%;
+}
+
+#socialBoxF {
+    bottom: 17%;
+    left: 52%;
+}
+
+.socialBox a {
+    color: white;
+    pointer-events: visible;
+    font-size: 2.5rem;
+    font-family: "French";
+}
+
+#SOCIAL_USER_D a {
+    font-size: 2rem;
+}
+
+#SOCIAL_USER_F {
+    font-size: 2.7rem;
 }

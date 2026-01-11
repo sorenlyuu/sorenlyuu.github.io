@@ -1,7 +1,3 @@
-function birth() {
-    return (new Date(new Date().getFullYear(), 0, 23).getTime() <= new Date().getTime() ? new Date().getFullYear() - 2009 : new Date().getFullYear() - 2009 - 1)
-}
-
 const texts = {
     "TEXT_HEADER": "*__@ Soren Ly__uu*",
     "TEXT_FOOTER": "Developed by Soren...\nUse the buttons on the side to open the corresponding pages.\n[This page is open source!](https://github.com/sorenlyuu/sorenlyuu.github.io)",
@@ -49,64 +45,3 @@ const texts = {
     "TEXT_SOURCE": "[This page is open source!](https://github.com/sorenlyuu/sorenlyuu.github.io)",
     "TEXT_FONT_DISABLE": "I can't see shit"
 }
-
-const images = {
-    "IMG_FANDOM_A": "assets/images/Lycaon.jpg",
-    "IMG_FANDOM_B": "assets/images/Themanbehindtheslaughter.jpg",
-    "IMG_FANDOM_C": "assets/images/Rocky.jpg",
-    "IMG_FANDOM_D": "assets/images/LiBing.jpg",
-    "IMG_FANDOM_F": "assets/images/Burger.jpg",
-    "IMG_FANDOM_E": "assets/images/Kit.jpg",
-    "IMG_SOCIAL_A": "assets/images/Discord.png",
-    "IMG_SOCIAL_B": "assets/images/Github.png",
-    "IMG_SOCIAL_C": "assets/images/Reddit.png",
-    "IMG_SOCIAL_D": "assets/images/Primogem.png",
-    "IMG_SOCIAL_E": "assets/images/Tiktok.png",
-    "IMG_SOCIAL_F": "assets/images/Instagram.png",
-}
-
-function parse(text) {
-    if (!text) return ""
-    return text
-        // kill html
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        // ***bold + italic***
-        .replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>")
-        // **bold**
-        .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-        // *italic*
-        .replace(/\*(.+?)\*/g, "<em>$1</em>")
-        // __underline__
-        .replace(/__(.+?)__/g, "<u>$1</u>")
-        // ~~strikethrough~~
-        .replace(/~~(.+?)~~/g, "<s>$1</s>")
-        // [hyper](links)
-        .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
-        // \n new line
-        .replace(/\n/g, "<br>")
-}
-
-function loadTexts() {
-    for (const id in texts) {
-        const element = document.getElementById(id)
-        if (element) {
-            element.innerHTML = parse(texts[id])
-        }
-    }
-}
-
-function loadImages() {
-    for (const id in images) {
-        const element = document.getElementById(id)
-        if (element) {
-            element.src = images[id]
-        }
-    }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadTexts()
-    loadImages()
-})
